@@ -1,0 +1,725 @@
+/* KELSEY LAHAVICH */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* VARIABLES */
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+    --molle: 'Molle', cursive;
+    --monsterrat: 'Montserrat', sans-serif; 
+}
+
+/* SKIP LINK */
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+
+/* BODY STYLES */
+body {
+    font-family: var(--monsterrat);
+    color: var(--black);
+    box-sizing: border-box;
+    line-height: 2rem;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(var(--teal), #FFFFFF);
+    
+}
+header p {
+    margin: 10px;
+    font-size: 1.25rem;
+    padding-bottom: 50px;
+    font-weight: lighter;
+}
+
+h1 {
+    margin: 10px;
+    font-weight: lighter;
+}
+
+#logo img{
+    padding-top: 10vw;
+    max-width: 50vw;
+}
+
+h1, h2, h3 {
+    font-family: var(--molle);
+}
+
+h4, p, q, small, nav, form {
+    font-family: var(--monsterrat);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2, h3 {
+    font-size: 2rem;
+}
+
+
+
+/* NAV */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+
+#menu-toggle label {
+    background-color: var(--yellow);
+    padding: 20px 120px;
+    font-weight: bold;
+}
+
+#menu-toggle input {
+    display: none;
+}
+
+#menu-toggle {
+    position: absolute;
+    text-transform: uppercase;
+    top: 20px;
+    right: 0;
+}
+
+#menu-toggle ul{
+    position: relative;
+    display: none;
+    background-color: var(--teal);
+    width: 100vw;
+}
+
+#menu-toggle li{
+    height: 20vh;
+    display: flex;
+    font-weight: bold;
+    border-bottom: .5px solid var(--dark-gray);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#menu-toggle li a{
+    text-decoration: none;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+#menu-toggle input:checked ~ ul, #menu-toggle input:checked ~ label {
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-toggle input:checked ~ label {
+    align-items: center;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* INTRO SECTION */
+
+#intro p, h2 {
+    margin: 10px;
+}
+/* MAIN IMAGES */
+#img-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 33.33%) auto;
+    gap: 20px;
+}
+
+
+#img-grid picture, #img-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* PLAN YOUR TRIP SECTION */
+
+#plan h3 {
+    padding-bottom: 20px;
+}
+#plan div {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    gap: 10px;
+}
+
+#plan {
+    background-color: var(--yellow);
+    padding: 30px;
+    margin-top: 90px;
+}
+
+#plan img {
+    width: 100%;
+}
+
+
+#plan div section {
+    background-color: var(--teal);
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(2, auto);
+    padding: 10px;
+    border: 4px var(--white) solid;
+}
+
+#plan h4 {
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+} 
+
+/* TESTIMONIALS SECTION */
+#testimonials section {
+    display: grid;
+    justify-items: center;
+}
+
+#testimonials h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#testimonials h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+#testimonials p {
+    font-size: 1rem;
+}
+
+#testimonials q {
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    max-width: 400px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+
+/* ABOUT SECTION */
+#about {
+    display: grid;
+    justify-items: center;
+    background-color: var(--blue);
+}
+
+#about h3 {
+    text-align: left;
+}
+
+#about div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+
+}
+
+#about section {
+    display: grid;
+    grid-column: span 1;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#about img {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+
+
+#about h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#about p{
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+
+/* CONTACT/FORM SECTION */
+#contact h3{
+    display: flex;
+    font-size: 2rem;
+    padding: 1.5rem 1.5rem;
+}
+
+#contact h3 span{
+    font-size: 1rem;
+    padding-left: 10px;
+    font-style: italic;
+    font-family: var(--monsterrat);
+}
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input, #contact select {
+    border: var(--purple) solid 2px;
+}
+
+#contact form {
+    display: grid;
+    margin: 0 10vw;
+}
+
+#contact form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label span.required {
+    color: var(--purple);
+}
+
+#contact form label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+#contact input[type="radio"]{
+    accent-color: var(--purple);
+    margin: 5px;
+    width: 50px;
+    height: 70px;
+}
+
+.radio-label {
+    font-weight: lighter ;
+}
+
+#nums legend {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+fieldset {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr ; 
+}
+
+#contact #mySubmit {
+    margin-top: 10px;
+    background-color: var(--purple);
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+form select, form input {
+    height: 8vh;
+    font-size: 1rem;
+    font-family: var(--monsterrat);
+    font-weight: lighter;
+}
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    padding: 10px;
+    background-color: var(--lightGray);
+}
+
+footer a {
+    text-decoration: none;
+    padding: 5px;
+    color: var(--black);
+}
+
+
+/* ---------MEDIA QUERIES---------- */
+
+/* SMALL SCREENS*/
+@media screen and (min-width: 500px) {
+    #logo img {
+        max-width: 80vw;
+    }
+    #about h3 {
+        padding-top: 30px;
+    }
+
+    input {
+        line-height: 2rem;
+    }
+
+    #contact input[type="radio"]{
+        display: inline-block;
+    }  
+
+
+}
+/*MEDIUM SCREENS*/
+@media screen and (min-width: 700px){
+    header {
+        display: grid;
+        grid-template-columns: 20vw 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    header h1, header p {
+        display: grid;
+        grid-column: 2 / -1;
+        grid-row: 1 /2;
+    }
+
+    header h1 {
+        position: relative;
+        font-size: 4rem;
+        top: 7vh;
+    }
+    
+    header p {
+        font-size: 1.3rem;
+        font-weight: lighter;
+        position: relative;
+        top: 50%;
+        padding-top: 20px;
+      
+    } 
+
+    #logo img {
+        width: 100%;
+    }
+
+
+    #menu-toggle {
+        position: static;
+        align-items: center;
+    }
+
+    nav {
+        display: grid;
+        justify-items: center;
+        grid-column: 1 / -1;
+        margin-top: 5vh;
+    }
+
+
+    #menu-toggle ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 90vw;
+        background-color: var(--white);
+    }
+
+    #menu-toggle li {
+        background-color: var(--lightGray);
+        height: 10vh;
+        font-weight: bold;
+        border: none;
+        gap: 20px;
+    }
+    #menu-toggle .active {
+        background-color: var(--yellow);
+    }
+
+    #menu-toggle li:hover {
+        background-color: var(--yellow);
+    }
+    
+    label[for="toggle"]{
+        display: none;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 8vw;
+    }
+
+    #intro p {
+        padding: 0 10vh 0 0;
+    }
+
+    #intro h2 {
+        padding: 10vh 0 0 0;
+    }
+
+
+    #img-grid{
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 50% 50%;
+        overflow: hidden;
+        padding-bottom: 1rem;
+        gap: 10px;
+    } 
+
+    #img-grid picture {
+        grid-column: 1 / -1;
+    }
+
+    
+    #plan div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 0 10vw;
+    }
+    #plan h3, #testimonials h3, #about h3 {
+        margin: 0 10vw;
+        padding: 5vh 0 2vh;
+    }
+
+    #testimonials div {
+        display: grid;
+        margin: 0 10vw;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #about div{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        margin: 0 10vw;
+    }
+
+    #about h3 {
+        justify-self: left;
+    }
+  
+    #contact {
+        margin: 0 10vw;
+    }
+
+    #contact h3 {
+        display: flex;
+        margin-left: 7vw;
+    }
+
+    #contact form input {
+        height: 5vh;
+    }
+    fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #mySubmit {
+        font-size: 1rem;
+        position: relative;
+        top: 30px;
+        right: -30vw;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    #contact form input, #contact select {
+        height: 6vh;
+        }
+    
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-items: center;
+        font-size: .75rem;
+        gap: 15px;
+    }
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 1200px){
+    nav {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        right: 0;
+    }
+
+    #menu-toggle ul {
+        width: 60vw;
+    }
+
+    #menu-toggle li {
+        height: 6vh;
+    }
+
+    header {
+        grid-template-columns: 15vw 1fr;
+    }
+
+    header h1{
+        top: 10vh;
+    }
+
+    header p {
+        padding-top: 10vh;
+    }
+
+    #intro {
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: 42% 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+   #intro h2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    #intro p {
+        position: relative;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-size: 1.2rem;
+        top: 13vh;
+        margin-right: 5px;
+        line-height: 1.5;
+    }
+
+    #intro #img-grid {
+        width: 100%;
+        grid-template-columns: 50% 50%;
+        grid-column: 2/3; 
+    }
+
+
+    #plan div{
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+
+    #testimonials div {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+   #about section {
+        padding: 5vh;
+   }
+
+    #about div{
+        gap: 2rem;
+    }
+
+    #contact h3 {
+        grid-column: 1/-1;
+        margin: 0;
+    }
+
+    #contact fieldset {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    #contact form input, #contact select {
+        height: 7vh;    
+        }
+
+    #contact form {
+        display: grid;
+        grid-template-columns: repeat(3, 33.33%);
+        gap: 25px;
+        width: 90%;
+        margin: 0;
+    }
+
+    #mySubmit {
+        font-size: 1rem;
+        position: relative;
+        right: 0;
+        width: 50%;
+
+    }
+}
+ 
+
