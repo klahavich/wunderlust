@@ -84,7 +84,7 @@ table {
 }
 
 #menu-toggle h2 {
-    display: hidden;
+    display: none;
 }
 
 /* BODY AND HEADER */
