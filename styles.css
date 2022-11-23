@@ -446,40 +446,15 @@ footer p {
 
 
 }
-/*MEDIUM SCREENS*/
-@media screen and (min-width: 700px){
-    header {
-        display: grid;
-        grid-template-columns: 20vw 1fr;
-        grid-template-rows: repeat(2, auto);
-    }
+/* MEDIUM SCREEN MEDIA QUERIES */
 
-    header h1, header p {
-        display: grid;
-        grid-column: 2 / -1;
-        grid-row: 1 /2;
-    }
+@media screen and (min-width: 700px) {
 
     header h1 {
         position: relative;
-        font-size: 4rem;
-        top: 7vh;
-    }
-    
-    header p {
-        font-size: 1.3rem;
-        font-weight: lighter;
-        position: relative;
-        top: 50%;
-        padding-top: 20px;
-      
-    } 
-
-    #logo img {
-        width: 100%;
     }
 
-
+    /* NAV */
     #menu-toggle {
         position: static;
         align-items: center;
@@ -488,25 +463,24 @@ footer p {
     nav {
         display: grid;
         justify-items: center;
-        grid-column: 1 / -1;
-        margin-top: 5vh;
+        margin-top: 30px;
+        margin-bottom: -300px;
     }
-
 
     #menu-toggle ul{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         width: 90vw;
-        background-color: var(--white);
+        gap: 10px;
+        background-color: transparent;  
     }
 
     #menu-toggle li {
-        background-color: var(--lightGray);
-        height: 10vh;
+        background-color: var(--light-gray);
         font-weight: bold;
         border: none;
-        gap: 20px;
     }
+
     #menu-toggle .active {
         background-color: var(--yellow);
     }
@@ -515,48 +489,48 @@ footer p {
         background-color: var(--yellow);
     }
     
-    label[for="toggle"]{
+    label[for="toggle"] {
         display: none;
     }
 
+    /* INTRO */
     #intro {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0 8vw;
     }
 
     #intro p {
-        padding: 0 10vh 0 0;
+        line-height: 2;
+        margin-right: 90px;
     }
-
-    #intro h2 {
-        padding: 10vh 0 0 0;
-    }
-
 
     #img-grid{
+        display: grid;
         grid-template-columns: 40vw 40vw;
         grid-template-rows: 50% 50%;
         overflow: hidden;
-        padding-bottom: 1rem;
+        padding-bottom: .5rem;
         gap: 10px;
+        margin-left: 50px;
     } 
 
     #img-grid picture {
         grid-column: 1 / -1;
     }
 
-    
+    /* PLAN */
     #plan div {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         margin: 0 10vw;
     }
-    #plan h3, #testimonials h3, #about h3 {
-        margin: 0 10vw;
-        padding: 5vh 0 2vh;
+
+    /* TESTIMONIALS */
+
+    #testimonials h3 {
+        margin-top: 20px;
     }
 
     #testimonials div {
@@ -565,55 +539,14 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
-    #about div{
+    /* ABOUT */
+
+     #about div{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
         margin: 0 10vw;
     }
-
-    #about h3 {
-        justify-self: left;
-    }
-  
-    #contact {
-        margin: 0 10vw;
-    }
-
-    #contact h3 {
-        display: flex;
-        margin-left: 7vw;
-    }
-
-    #contact form input {
-        height: 5vh;
-    }
-    fieldset {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    #mySubmit {
-        font-size: 1rem;
-        position: relative;
-        top: 30px;
-        right: -30vw;
-        width: 50%;
-        margin-bottom: 10px;
-    }
-    #contact form input, #contact select {
-        height: 6vh;
-        }
-    
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        justify-items: center;
-        font-size: .75rem;
-        gap: 15px;
-    }
-}
 
 /* LARGE SCREENS */
 @media screen and (min-width: 1200px){
