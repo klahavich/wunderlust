@@ -476,7 +476,7 @@ footer p {
     }
 
     #menu-toggle li {
-        background-color: var(--light-gray);
+        background-color: var(--white);
         font-weight: bold;
         border: none;
     }
@@ -548,110 +548,136 @@ footer p {
         margin: 0 10vw;
     }
 
-/* LARGE SCREENS */
-@media screen and (min-width: 1200px){
-    nav {
-        position: absolute;
-        top: 0;
-        margin: 0;
-        right: 0;
-    }
-
-    #menu-toggle ul {
-        width: 60vw;
-    }
-
-    #menu-toggle li {
-        height: 6vh;
-    }
-
-    header {
-        grid-template-columns: 15vw 1fr;
-    }
-
-    header h1{
-        top: 10vh;
-    }
-
-    header p {
-        padding-top: 10vh;
-    }
-
-    #intro {
-        margin-top: 10vh;
-        display: grid;
-        grid-template-columns: 50% 1fr;
-        grid-template-rows: repeat(3, auto);
-    }
-
-   #intro h2 {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        
-    }
-
-    #intro p {
-        position: relative;
-        grid-column: 1/2;
-        grid-row: 1/2;
-        font-size: 1.2rem;
-        top: 20vh;
-        margin-right: 5px;
-        line-height: 1.5;
-    }
-
-    #intro #img-grid {
-        width: 100%;
-        grid-template-columns: 50% 50%;
-        grid-column: 2/3; 
-    }
-
-
-    #plan div{
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-        grid-template-rows: auto;
-        justify-content: center;
-    }
-
-    #testimonials div {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-   #about section {
-        padding: 10vh;
-   }
-
-    #contact h3 {
-        grid-column: 1/-1;
-        margin: 0;
-    }
-
-    #contact fieldset {
-        max-width: 100%;
-        min-width: 100%;
-    }
-
-    #contact form input, #contact select {
-        height: 7vh;    
+    /* LARGE SCREEN MEDIA QUERIES */
+    @media screen and (min-width: 1200px){
+    
+        /* HEADER */
+    
+        header {
+            grid-template-columns: 15vw 1fr;
         }
-
-    #contact form {
-        display: grid;
-        grid-template-columns: repeat(3, 33.33%);
-        gap: 25px;
-        width: 90%;
-        margin: 0;
+    
+        header h1{
+            top: 10vh;
+        }
+    
+        header p {
+            padding-top: 10vh;
+        }
+    
+        /* NAV */
+    
+        nav {
+            position: absolute;
+            top: 0;
+            margin: 0;
+            right: 0;
+        }
+    
+        #menu-toggle ul {
+            width: 60vw;
+        }
+    
+        #menu-toggle li {
+            height: 6vh;
+        }
+    
+        /* INTRO */
+    
+        #intro {
+            margin-top: 5vh;
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            grid-template-rows: repeat(3, auto);
+        }
+    
+       #intro h2 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font-size: 2rem; 
+        }
+    
+        #intro p {
+            position: relative;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font-size: 1.2rem;
+            top: 15vh;
+            line-height: 1.5;
+        }
+    
+        #intro #img-grid {
+            width: 100%;
+            grid-template-columns: 50% 50%;
+            grid-column: 2/3; 
+            margin-left: -50px;
+        }
+    
+    
+        /* PLAN */
+    
+        #plan div{
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+            grid-template-rows: auto;
+            justify-content: center;
+            padding-top: 30px;
+            padding-bottom: 80px;
+        }
+    
+    
+        /* TESTIMONIALS */
+    
+        #testimonials div {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                padding-bottom: 60px;
+                padding-top: 30px;
+        }
+    
+        #testimonials h3 {
+            margin-left: 90px;
+        }
+    
+        /* ABOUT */
+    
+       #about section {
+            padding: 10vh;
+       }
+    
+       #about h3 {
+        margin-left: 90px;
+       }
+    
+       /* CONTACT */
+    
+        #contact h3 {
+            grid-column: 1/-1;
+            margin: 0;
+        }
+    
+        #contact fieldset {
+            max-width: 100%;
+            min-width: 100%;
+        }
+    
+        #contact form input, #contact select {
+            height: 7vh;    
+            }
+    
+        #contact form {
+            display: grid;
+            grid-template-columns: repeat(3, 33.33%);
+            gap: 25px;
+            width: 90%;
+            margin: 30px;
+        }
+    
+        #mySubmit {
+            font-size: 1rem;
+            position: relative;
+            right: 0;
+            width: 50%;
+    
+        }
     }
-
-    #mySubmit {
-        font-size: 1rem;
-        position: relative;
-        right: 0;
-        width: 50%;
-
-    }
-}
- 
-
