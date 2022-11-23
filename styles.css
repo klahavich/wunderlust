@@ -464,6 +464,10 @@ footer p {
         align-items: center;
     }
 
+    #menu-toggle h2 {
+        display: none;
+    }
+
     nav {
         display: grid;
         justify-items: center;
@@ -584,6 +588,10 @@ footer p {
     
         #menu-toggle li {
             height: 6vh;
+        }
+
+        #menu-toggle h2 {
+            display: none;
         }
     
         /* INTRO */
